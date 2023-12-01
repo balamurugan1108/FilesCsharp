@@ -8,6 +8,7 @@ namespace BusinessLogicLayer
 {
     public interface ILogicLayer
     {
-        public object GetJson();
+        public object JsonTOEXcel();
+        public object ExcelToJson();
     }
 }

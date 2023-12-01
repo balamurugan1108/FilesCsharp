@@ -8,6 +8,8 @@ namespace DataLayer
 {
     public interface IDataLayerCls
     {
-        public object GetDataLayer();
+        public object JsonTOEXcel();
+
+        public object ExcelToJson();
     }
 }

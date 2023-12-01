@@ -9,9 +9,14 @@ namespace BusinessLogicLayer
         {
             _dataLayerCls = dataLayerCls;
         }
-        public object GetJson()
+        public object JsonTOEXcel()
         {
-            var data = _dataLayerCls.GetDataLayer();
+            var data = _dataLayerCls.JsonTOEXcel();
+            return data;
+        }
+        public object ExcelToJson()
+        {
+            var data =_dataLayerCls.ExcelToJson();
             return data;
         }
     }

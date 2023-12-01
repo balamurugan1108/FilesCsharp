@@ -13,11 +13,18 @@ namespace FIle_Json.Controllers
         {
             _logicLayer = logicLayer;
         }
-        [HttpGet("FileReadToExcel")]
-        public IActionResult GetJson()
+        [HttpGet("JsonToExcelFile")]
+        public IActionResult JsonTOEXcel()
         {
-            var data = _logicLayer.GetJson();
+            var data = _logicLayer.JsonTOEXcel();
             return Ok(data);
+        }
+
+        [HttpGet("ExcelToJsonFile")]
+        public IActionResult ExcelToJson()
+        {
+            var data2  = _logicLayer.ExcelToJson();
+            return Ok(data2);
         }
 
     }

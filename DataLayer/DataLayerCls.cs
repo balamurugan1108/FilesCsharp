@@ -21,14 +21,14 @@ namespace DataLayer
             _jsonDbContext = jsonDbContext;
         }
 
-       /* public object GetDataLayer()
+        public object JsonTOEXcel()
         {
             string filepath = @"\\192.168.0.115\vaf\New folder\sam.json";
             string read = File.ReadAllText(filepath);
             var jsonFile = JsonConvert.DeserializeObject<List<Dictionary<string, object>>>(read);
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             using (var package = new ExcelPackage())
-            {   
+            {
                 var worksheet = package.Workbook.Worksheets.Add("Data");
 
                 int row = 1;
@@ -54,10 +54,10 @@ namespace DataLayer
                 package.SaveAs(new FileInfo(savepath));
                 return savepath;
             }
-        }*/
+        }
 
 
-        public object GetDataLayer()
+        public object ExcelToJson()
         {
             string filepath = @"\\192.168.0.115\vaf\New folder\sam.json";
             string read = File.ReadAllText(filepath);
